@@ -26,7 +26,7 @@ if 'df' not in st.session_state:
 with st.container(border=True):
     cols = st.columns(2)
     with cols[0]:
-        for i in range(1, 11, 2):
+        for i in range(1, 6):
             st.button(
                 label=f'+{i}',
                 width='stretch',
@@ -34,7 +34,7 @@ with st.container(border=True):
                 key=f'b{i}'
             )
     with cols[1]:
-        for i in range(2, 11, 2):
+        for i in range(6, 11):
             st.button(
                 label=f'+{i}',
                 width='stretch',
@@ -59,7 +59,6 @@ st.download_button(
     "text/csv",
     use_container_width=True
 )
-    
 
         
         
