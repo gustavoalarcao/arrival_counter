@@ -1,8 +1,8 @@
 [theme]
-primaryColor="#462e7ac2"
-backgroundColor="#d6d1d1ff"
-secondaryBackgroundColor="#c7bfbfff"
-textColor="#1c1c1cff"
-borderColor="#1c1c1cff"
+primaryColor="#b6880b"
+backgroundColor="#003D4F"
+secondaryBackgroundColor="#003D4F"
+textColor="#93a1a1"
+borderColor="#93a1a1"
 baseFontWeight=500
 headingFontWeights=600
