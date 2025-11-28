@@ -4,16 +4,16 @@ from datetime import datetime, timedelta
 
 st.set_page_config(layout='centered')
 
-# st.markdown("""
-#     <style>
-#     div.stButton > button {
-#         height: 80px;  /* Tall buttons for fat fingers */
-#         font-weight: bold;
-#     }
-#     </style>
-#     """, 
-#     unsafe_allow_html=True
-# )
+st.markdown("""
+    <style>
+    div.stButton > button {
+        height: 80px;  /* Tall buttons for fat fingers */
+        font-weight: bold;
+    }
+    </style>
+    """, 
+    unsafe_allow_html=True
+)
 
 st.title('Contar chegadas')
 
