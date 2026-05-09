@@ -1,9 +1,13 @@
+from datetime import datetime, timedelta
+
 import streamlit as st
 import pandas as pd
-from datetime import datetime, timedelta
 
 st.set_page_config(layout='centered')
 
+    
+
+# Adjusting the dimensions of the button.
 st.markdown("""
     <style>
     div.stButton > button {
@@ -15,14 +19,16 @@ st.markdown("""
     unsafe_allow_html=True
 )
 
-st.title('Contar chegadas')
-
-if 'df' not in st.session_state:
+# Initializing the data container.
+if not 'df' in st.session_state:
     df = pd.DataFrame({
         'Tempo_chegada': []
     })
     st.session_state.df = df
 
+st.title('Contador de chegadas')
+
+# Adding the buttons.
 with st.container(border=True):
     for i in range(1, 11):
         st.button(
@@ -32,6 +38,7 @@ with st.container(border=True):
             key=f'b{i}'
         )
 
+# Extracting the data after each button press.
 for i in range(1, 11):
     if st.session_state[f'b{i}']:
         new_row = pd.DataFrame({'Tempo_chegada': i*[(datetime.now() - timedelta(hours=3)).strftime("%H:%M:%S")]})
@@ -42,6 +49,7 @@ for i in range(1, 11):
             icon='✅'
         )
 
+# Download button for the data collected.
 csv = st.session_state.df.to_csv(index=False).encode('utf-8')
 st.download_button(
     "📥Baixar",
